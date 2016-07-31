@@ -1,0 +1,4 @@
+com\smacrs\timemanagment\mvc\AccountControllerTest.class
+com\smacrs\timemanagment\mvc\BlogEntryControllerTest.class
+com\smacrs\timemanagment\core\repositories\AccountRepoTest.class
+com\smacrs\timemanagment\mvc\BlogControllerTest.class
