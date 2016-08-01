@@ -1,0 +1,1 @@
+CREATE DATABASE  IF NOT EXISTS `tm-development` CHARACTER SET utf8 COLLATE utf8_unicode_ci;

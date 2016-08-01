@@ -4,3 +4,4 @@
 /.settings/
 /bin/
 /.git/
+/.db/script-version.properties
