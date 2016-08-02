@@ -38,17 +38,15 @@ public class DataBaseUpdater {
 
 				String[] sqlsArray = sqls.split(";");
 
-				for (int j = 0; j < sqlsArray.length; j++) {
-					System.out.println("---------------------");
-					System.out.println(sqlsArray[j]);
-					System.out.println("---------------------");
+				for (int j = 0; j < sqlsArray.length; j++) { 
+					//System.out.println(sqlsArray[j]); 
 					try {
 						DButil.updateDB(sqlsArray[j] + " ;");
 					} catch (SQLException e) {
 						if (e.toString().contains("Query was empty")) {
 						} else {
 							e.printStackTrace();
-							System.out.println("Update DB FAIL");
+							System.err.println("Update DB FAIL");
 							return;
 						}
 					}
