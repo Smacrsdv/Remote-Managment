@@ -20,23 +20,40 @@ public class AccountUserDetails implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-//		GrantedAuthority authority = new GrantedAuthority() {
-//			@Override
-//			public String getAuthority() {
-//				return "ROLE_ADMIN";
-//			}
-//		};
+		// GrantedAuthority authority = new GrantedAuthority() {
+		// @Override
+		// public String getAuthority() {
+		// return "ROLE_ADMIN";
+		// }
+		// };
 
-		GrantedAuthority user = new GrantedAuthority() {
+		// GrantedAuthority user = new GrantedAuthority() {
+		// @Override
+		// public String getAuthority() {
+		// return "ROLE_USER";
+		// }
+		// };
+
+		GrantedAuthority user_smacrs = new GrantedAuthority() {
 			@Override
 			public String getAuthority() {
-				return "ROLE_USER";
+				return "ROLE_USER_smacrs";
 			}
 		};
 
+		// GrantedAuthority user_nickname = new GrantedAuthority() {
+		// @Override
+		// public String getAuthority() {
+		// return "ROLE_USER_#nickname";
+		// }
+		// };
+
 		ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-		//authorities.add(authority);
-		authorities.add(user);
+		// authorities.add(authority);
+		// authorities.add(user);
+		authorities.add(user_smacrs);
+		// authorities.add(user_nickname);
+
 		return authorities;
 	}
 

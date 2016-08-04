@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -41,6 +42,27 @@ public class FakeController {
 	public ResponseEntity<String> f3() {
 		System.out.println("f3");
 		return new ResponseEntity<String>("f3", HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "{nickname}/fake4", method = RequestMethod.GET)
+	@PreAuthorize("hasRole('ROLE_USER_' + #nickname)")
+	public ResponseEntity<String> f4(@PathVariable String nickname) {
+		System.out.println("f4 " + nickname);
+		return new ResponseEntity<String>("f4 " + nickname, HttpStatus.OK);
+	}
+
+	@RequestMapping(value = "{nickname}/fake5", method = RequestMethod.GET)
+	@PreAuthorize("hasRole('ROLE_USER') and #nickname == 'smacrs'")
+	public ResponseEntity<String> f5(@PathVariable String nickname) {
+		System.out.println("f5 " + nickname);
+		return new ResponseEntity<String>("f5", HttpStatus.OK);
+	}
+	
+	@RequestMapping(value = "{nickname}/fake6", method = RequestMethod.GET)
+	@PreAuthorize("hasRole('ROLE_USER')")
+	public ResponseEntity<String> f6(@PathVariable String nickname) {
+		System.out.println("f6 " + nickname);
+		return new ResponseEntity<String>("f6", HttpStatus.OK);
 	}
 
 }
