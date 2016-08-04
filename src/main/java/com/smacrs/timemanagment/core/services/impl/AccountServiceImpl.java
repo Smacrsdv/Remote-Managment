@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.smacrs.timemanagment.core.dao.AccountRepo;
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 import com.smacrs.timemanagment.core.services.AccountService;
 import com.smacrs.timemanagment.core.services.exceptions.AccountExistsException;
 import com.smacrs.timemanagment.core.services.util.AccountList;

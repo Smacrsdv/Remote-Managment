@@ -10,7 +10,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.smacrs.timemanagment.core.dao.AccountRepo;
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

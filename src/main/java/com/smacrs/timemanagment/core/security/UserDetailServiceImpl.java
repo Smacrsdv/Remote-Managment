@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 import com.smacrs.timemanagment.core.services.AccountService;
 
 /**

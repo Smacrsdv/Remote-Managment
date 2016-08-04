@@ -2,7 +2,7 @@ package com.smacrs.timemanagment.rest.resources;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 
 import org.springframework.hateoas.ResourceSupport;
 

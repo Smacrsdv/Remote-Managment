@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 import com.smacrs.timemanagment.core.services.AccountService;
 import com.smacrs.timemanagment.core.services.exceptions.AccountExistsException;
 import com.smacrs.timemanagment.core.services.util.AccountList;

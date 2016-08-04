@@ -2,7 +2,7 @@ package com.smacrs.timemanagment.rest.resources.asm;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 import com.smacrs.timemanagment.rest.mvc.AccountController;
 import com.smacrs.timemanagment.rest.resources.AccountResource;
 

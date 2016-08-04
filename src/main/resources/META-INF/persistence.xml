@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="tm">
+		<class>com.smacrs.timemanagment.core.entities.systementity.Account</class> 
+		<class>com.smacrs.timemanagment.core.entities.logicentity.AccountAuthority</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.AccountAuthorityPK</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Calender</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.CalenderPK</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Company</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.CompanyInfo</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.CompanyMonthHour</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.CompanyMonthHourPK</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.RoleOvertimeInfo</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.RoleOvertimeInfoPK</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Department</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Document</class>
+		<class>com.smacrs.timemanagment.core.entities.lut.LutAuthority</class>
+		<class>com.smacrs.timemanagment.core.entities.lut.LutProjectStatus</class>
+		<class>com.smacrs.timemanagment.core.entities.lut.LutTaskStatus</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.PersistentLogin</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Project</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.ProjectInfo</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.SalaryDetailsHistory</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.SalaryDetailsHistoryPK</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Sprint</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Task</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.TaskWorkEntry</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.Team</class>
+		<class>com.smacrs.timemanagment.core.entities.systementity.User</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.UserCompany</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.UserCompanyPK</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.UserTask</class>
+		<class>com.smacrs.timemanagment.core.entities.PK.UserTaskPK</class>
+		<class>com.smacrs.timemanagment.core.entities.logicentity.UserTimeTrack</class>
+	</persistence-unit>
+</persistence>

@@ -2,7 +2,7 @@ package com.smacrs.timemanagment.core.dao;
 
 import java.util.List;
 
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 
 /**
  * Created by Chris on 7/9/14.

@@ -1,6 +1,6 @@
 package com.smacrs.timemanagment.core.services;
 
-import com.smacrs.timemanagment.core.entities.Account;
+import com.smacrs.timemanagment.core.entities.systementity.Account;
 import com.smacrs.timemanagment.core.services.util.AccountList;
 
 /**
