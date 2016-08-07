@@ -14,7 +14,7 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "user_time_track")
-@NamedQuery(name = "UserTimeTrack.findAll", query = "SELECT u FROM UserTimeTrack u")
+@NamedQuery(name = "UserTimeTrack.findAllByUserANDCompany", query = "SELECT u FROM UserTimeTrack u WHERE u.user.id = :USERID and u.company.id = :COMPANYID")
 public class UserTimeTrack implements Serializable {
 	private static final long serialVersionUID = 1L;
 
