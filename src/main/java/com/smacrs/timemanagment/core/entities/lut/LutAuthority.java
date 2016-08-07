@@ -10,7 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "lut_authority")
-@NamedQuery(name = "LutAuthority.findAll", query = "SELECT l FROM LutAuthority l")
+@NamedQuery(name = "LutAuthority.findAllActive", query = "SELECT l FROM LutAuthority l WHERE l.active = true")
 public class LutAuthority extends BaseLut {
 	private static final long serialVersionUID = 1L;
 

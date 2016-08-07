@@ -9,7 +9,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "lut_project_status")
-@NamedQuery(name = "LutProjectStatus.findAll", query = "SELECT l FROM LutProjectStatus l")
+@NamedQuery(name = "LutProjectStatus.findAllActive", query = "SELECT l FROM LutProjectStatus l WHERE l.active = true")
 public class LutProjectStatus extends BaseLut {
 	private static final long serialVersionUID = 1L;
 
