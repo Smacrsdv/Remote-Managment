@@ -4,11 +4,12 @@
  */
 package com.smacrs.timemanagment.core.dao.base.impl;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+
+import org.springframework.stereotype.Repository;
 
 import com.smacrs.timemanagment.core.dao.base.LutDAO;
 import com.smacrs.timemanagment.core.entities.lut.LutAuthority;
@@ -19,6 +20,7 @@ import com.smacrs.timemanagment.core.entities.lut.LutTaskStatus;
  * @author Mohamed265
  *
  */
+@Repository
 public class LutDAOImpl extends BaseDAOImpl implements LutDAO {
 
 	private static final long serialVersionUID = 1L;

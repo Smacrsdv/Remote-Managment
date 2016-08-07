@@ -12,7 +12,6 @@ import com.smacrs.timemanagment.core.entities.lut.BaseLut;
 
 /**
  * @author Mohamed265
- *
  */
 public class Utils {
 

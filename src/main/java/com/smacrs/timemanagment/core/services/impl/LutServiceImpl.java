@@ -20,7 +20,7 @@ import com.smacrs.timemanagment.core.util.Utils;
 @Transactional
 public class LutServiceImpl implements LutService {
 
-	@Autowired
+	@Autowired(required = true)
 	private LutBean lutbean;
 
 	@Override
