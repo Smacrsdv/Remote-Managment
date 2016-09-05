@@ -3,9 +3,9 @@ package com.smacrs.timemanagment.core.dao.impl;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.smacrs.timemanagment.core.dao.TimeTrackerDao;
@@ -14,7 +14,7 @@ import com.smacrs.timemanagment.core.entities.logicentity.UserTimeTrack;
 @Repository("TimeTrackerDao")
 public class TimeTrackerDaoImpl implements TimeTrackerDao {
 
-	@Autowired
+	@PersistenceContext
 	EntityManager em;
 
 	@Override

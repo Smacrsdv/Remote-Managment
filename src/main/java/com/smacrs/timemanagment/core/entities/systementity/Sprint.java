@@ -21,8 +21,9 @@ public class Sprint implements Serializable {
 
 	@Column(nullable = false)
 	private Boolean active;
-
-	@Column(name = "end_date", nullable = false)
+//we have to run it as java application to edit that class in DB 
+	// no run java app create db from an existing script no crate from entities 
+	@Column(name = "end_date", nullable = true)
 	private Date endDate;
 
 	@Column(nullable = false, length = 50)
@@ -33,7 +34,7 @@ public class Sprint implements Serializable {
 
 	// uni-directional many-to-one association to Project
 	@ManyToOne
-	@JoinColumn(name = "project_id", nullable = false)
+	@JoinColumn(name = "project_id", nullable = true)
 	private Project project;
 
 	public Sprint() {
