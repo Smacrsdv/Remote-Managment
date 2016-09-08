@@ -9,8 +9,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
         http://www.springframework.org/schema/tx
-        http://www.springframework.org/schema/tx/spring-tx.xsd">
-
+        http://www.springframework.org/schema/tx/spring-tx.xsd"> 
 	<context:component-scan base-package="com.smacrs.timemanagment" />
 
 	<bean id="placeholderConfig"
@@ -32,7 +31,7 @@
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
 		</property>
 		<property name="jpaProperties">
-			<map>
+			<map> 
 				<entry key="hibernate.show_sql" value="true" />
 			</map>
 		</property>

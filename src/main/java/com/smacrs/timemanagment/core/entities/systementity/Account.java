@@ -32,9 +32,9 @@ public class Account implements Serializable {
 
 	@Column(name = "is_enabled", nullable = false)
 	private boolean isEnabled;
-//
-//	@Column(length = 255)
-//	private String name;
+ 
+	@Transient
+	private String name; 
 
 	@Column(nullable = false, length = 100)
 	private String password;
@@ -93,13 +93,13 @@ public class Account implements Serializable {
 		this.isEnabled = isEnabled;
 	}
 
-//	public String getName() {
-//		return this.name;
-//	}
-//
-//	public void setName(String name) {
-//		this.name = name;
-//	}
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public String getPassword() {
 		return this.password;
