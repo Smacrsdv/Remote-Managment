@@ -34,7 +34,7 @@ public class AccountResource extends ResourceSupport {
 
     public Account toAccount() {
         Account account = new Account();
-        account.setName(name);
+        account.setUsername(name);
         account.setPassword(password);
         return account;
     }

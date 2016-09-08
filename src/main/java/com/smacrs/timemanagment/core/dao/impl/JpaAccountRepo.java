@@ -33,7 +33,7 @@ public class JpaAccountRepo implements AccountRepo {
 
 	@Override
 	public Account findAccountByName(String name) {
-		Query query = em.createQuery("SELECT a FROM Account a WHERE a.username=?1");
+		Query query = em.createQuery("SELECT a FROM Account a,AccountAuthority aa on a.username=?1 join aa.is_granted=1");
 		query.setParameter(1, name);
 		List<Account> accounts = query.getResultList();
 		if (accounts.size() == 0) {

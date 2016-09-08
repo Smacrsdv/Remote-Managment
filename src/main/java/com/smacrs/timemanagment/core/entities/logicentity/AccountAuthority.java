@@ -18,6 +18,8 @@ import java.util.Date;
 @Table(name = "account_authority")
 @NamedQuery(name = "AccountAuthority.findAll", query = "SELECT a FROM AccountAuthority a")
 public class AccountAuthority implements Serializable {
+	
+
 	private static final long serialVersionUID = 1L;
 
 	@EmbeddedId
@@ -125,6 +127,13 @@ public class AccountAuthority implements Serializable {
 
 	public void setCompany(Company company) {
 		this.company = company;
+	}
+	
+	@Override
+	public String toString() {
+		return "AccountAuthority [id=" + id + ", deniedAt=" + deniedAt + ", grantAt=" + grantAt + ", isGranted="
+				+ isGranted + ", account=" + account + ", grantedBy=" + grantedBy + ", deniedBy=" + deniedBy
+				+ ", lutAuthority=" + lutAuthority + ", company=" + company + "]";
 	}
 
 }

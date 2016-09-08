@@ -22,19 +22,19 @@ public class Account implements Serializable {
 	private String email;
 
 	@Column(name = "is_account_non_expired", nullable = false)
-	private byte isAccountNonExpired;
+	private boolean isAccountNonExpired;
 
 	@Column(name = "is_account_non_locked", nullable = false)
-	private byte isAccountNonLocked;
+	private boolean isAccountNonLocked;
 
 	@Column(name = "is_credentials_non_expired", nullable = false)
-	private byte isCredentialsNonExpired;
+	private boolean isCredentialsNonExpired;
 
 	@Column(name = "is_enabled", nullable = false)
-	private byte isEnabled;
-
-	@Column(length = 255)
-	private String name;
+	private boolean isEnabled;
+//
+//	@Column(length = 255)
+//	private String name;
 
 	@Column(nullable = false, length = 100)
 	private String password;
@@ -61,45 +61,45 @@ public class Account implements Serializable {
 		this.email = email;
 	}
 
-	public byte getIsAccountNonExpired() {
+	public boolean getIsAccountNonExpired() {
 		return this.isAccountNonExpired;
 	}
 
-	public void setIsAccountNonExpired(byte isAccountNonExpired) {
+	public void setIsAccountNonExpired(boolean isAccountNonExpired) {
 		this.isAccountNonExpired = isAccountNonExpired;
 	}
 
-	public byte getIsAccountNonLocked() {
+	public boolean getIsAccountNonLocked() {
 		return this.isAccountNonLocked;
 	}
 
-	public void setIsAccountNonLocked(byte isAccountNonLocked) {
+	public void setIsAccountNonLocked(boolean isAccountNonLocked) {
 		this.isAccountNonLocked = isAccountNonLocked;
 	}
 
-	public byte getIsCredentialsNonExpired() {
+	public boolean getIsCredentialsNonExpired() {
 		return this.isCredentialsNonExpired;
 	}
 
-	public void setIsCredentialsNonExpired(byte isCredentialsNonExpired) {
+	public void setIsCredentialsNonExpired(boolean isCredentialsNonExpired) {
 		this.isCredentialsNonExpired = isCredentialsNonExpired;
 	}
 
-	public byte getIsEnabled() {
+	public boolean getIsEnabled() {
 		return this.isEnabled;
 	}
 
-	public void setIsEnabled(byte isEnabled) {
+	public void setIsEnabled(boolean isEnabled) {
 		this.isEnabled = isEnabled;
 	}
 
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+//	public String getName() {
+//		return this.name;
+//	}
+//
+//	public void setName(String name) {
+//		this.name = name;
+//	}
 
 	public String getPassword() {
 		return this.password;

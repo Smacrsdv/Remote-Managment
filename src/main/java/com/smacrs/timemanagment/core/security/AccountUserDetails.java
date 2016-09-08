@@ -34,12 +34,12 @@ public class AccountUserDetails implements UserDetails {
 		// }
 		// };
 
-		GrantedAuthority user_smacrs = new GrantedAuthority() {
-			@Override
-			public String getAuthority() {
-				return "ROLE_USER_smacrs";
-			}
-		};
+//		GrantedAuthority user_smacrs = new GrantedAuthority() {
+//			@Override
+//			public String getAuthority() {
+//				return "ROLE_USER_smacrs";
+//			}
+//		};
 
 		// GrantedAuthority user_nickname = new GrantedAuthority() {
 		// @Override
@@ -48,13 +48,14 @@ public class AccountUserDetails implements UserDetails {
 		// }
 		// };
 
-		ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+		//ArrayList<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
 		// authorities.add(authority);
 		// authorities.add(user);
-		authorities.add(user_smacrs);
+		//authorities.add(user_smacrs);
 		// authorities.add(user_nickname);
 
-		return authorities;
+		//return authorities;
+		return null;
 	}
 
 	@Override
@@ -64,17 +65,17 @@ public class AccountUserDetails implements UserDetails {
 
 	@Override
 	public String getUsername() {
-		return account.getName();
+		return account.getUsername();
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-		return true;
+		return account.getIsAccountNonExpired();
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		return true;
+		return account.getIsAccountNonLocked();
 	}
 
 	@Override
