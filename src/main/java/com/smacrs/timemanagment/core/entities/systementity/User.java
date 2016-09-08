@@ -18,12 +18,12 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(unique = true, nullable = false)
-	private int id;
+	private int id ;
 
 	@Column(nullable = false, length = 500)
 	private String address;
 
-	@Column(name = "cv_link", nullable = false, length = 500)
+	@Column(name = "cv_link", nullable = true, length = 500)
 	private String cvLink;
 
 	@Column(nullable = false, length = 50)
@@ -34,12 +34,13 @@ public class User implements Serializable {
 	@JoinColumn(name = "id", nullable = false, insertable = false, updatable = false)
 	private Account account;
 
+	// TODO add department to user
 	// uni-directional many-to-one association to Department
-	@ManyToOne
-	@JoinColumn(name = "department_id", nullable = false)
-	private Department department;
+	//@ManyToOne
+	//@JoinColumn(name = "department_id", nullable = false)
+	//private Department department;
 
-	// uni-directional many-to-many association to Project
+	// uni-directional many-to-many association to Projectid
 	// @ManyToMany
 	// @JoinTable(name = "user_project", joinColumns = {
 	// @JoinColumn(name = "user_id", nullable = false) }, inverseJoinColumns = {
@@ -96,13 +97,13 @@ public class User implements Serializable {
 		this.account = account;
 	}
 
-	public Department getDepartment() {
-		return this.department;
-	}
-
-	public void setDepartment(Department department) {
-		this.department = department;
-	}
+//	public Department getDepartment() {
+//		return this.department;
+//	}
+//
+//	public void setDepartment(Department department) {
+//		this.department = department;
+//	}
 
 	// public List<Project> getProjects() {
 	// return this.projects;

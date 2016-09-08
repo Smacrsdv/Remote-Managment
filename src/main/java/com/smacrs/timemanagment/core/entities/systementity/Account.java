@@ -33,7 +33,7 @@ public class Account implements Serializable {
 	@Column(name = "is_enabled", nullable = false)
 	private byte isEnabled;
 
-	@Column(length = 255)
+	@Transient
 	private String name;
 
 	@Column(nullable = false, length = 100)
