@@ -1,7 +1,11 @@
 package com.smacrs.timemanagment.core.entities.systementity;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.*;
+
+import com.smacrs.timemanagment.core.entities.lut.LutAuthority;
 
 /**
  * The persistent class for the account database table.
@@ -42,6 +46,8 @@ public class Account implements Serializable {
 	@Column(nullable = false, length = 50)
 	private String username;
 
+	private List<LutAuthority> authorities;
+	
 	public Account() {
 	}
 
@@ -115,6 +121,14 @@ public class Account implements Serializable {
 
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	
+	public List<LutAuthority> getAuthorities() {
+		return authorities;
+	}
+
+	public void setAuthorities(List<LutAuthority> authorities) {
+		this.authorities = authorities;
 	}
 
 }

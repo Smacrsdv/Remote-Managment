@@ -3,9 +3,11 @@ package com.smacrs.timemanagment.core.security;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.smacrs.timemanagment.core.dao.AccountRepo;
 import com.smacrs.timemanagment.core.entities.systementity.Account;
 
 /**
@@ -18,6 +20,8 @@ public class AccountUserDetails implements UserDetails {
 		this.account = account;
 	}
 
+	@Autowired
+	AccountRepo accountRepo;
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// GrantedAuthority authority = new GrantedAuthority() {
@@ -33,13 +37,18 @@ public class AccountUserDetails implements UserDetails {
 		// return "ROLE_USER";
 		// }
 		// };
-
-//		GrantedAuthority user_smacrs = new GrantedAuthority() {
-//			@Override
-//			public String getAuthority() {
-//				return "ROLE_USER_smacrs";
-//			}
-//		};
+//		account.setAuthorities(accountRepo.findAccountByName(account.getUsername()).getAuthorities());
+		ArrayList<GrantedAuthority> authorities= new ArrayList<>();
+		for (int i = 0; i < account.getAuthorities().size(); i++) {
+			String authority=account.getAuthorities().get(i).getName();
+			authorities.add(new GrantedAuthority() {
+				@Override
+				public String getAuthority() {
+					return authority;
+				}
+			});
+		}
+		
 
 		// GrantedAuthority user_nickname = new GrantedAuthority() {
 		// @Override
@@ -54,8 +63,8 @@ public class AccountUserDetails implements UserDetails {
 		//authorities.add(user_smacrs);
 		// authorities.add(user_nickname);
 
-		//return authorities;
-		return null;
+		return authorities;
+//		return null;
 	}
 
 	@Override
@@ -80,11 +89,11 @@ public class AccountUserDetails implements UserDetails {
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		return true;
+		return account.getIsCredentialsNonExpired();
 	}
 
 	@Override
 	public boolean isEnabled() {
-		return true;
+		return account.getIsEnabled();
 	}
 }
